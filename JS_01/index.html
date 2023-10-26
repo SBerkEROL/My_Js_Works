@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS_01</title>
+    <script>
+      console.log("head icerisindeki kod calisti");
+    </script>
+  </head>
+  <body>
+    <script>
+      // JS alani
+      console.log("Script calisti");
+
+      x = 5 + 6;
+      // x'e +-5+6=11'i atadik sonra onu yazdir dedik
+      console.log(x);
+
+      // sayfa onay bekleyen bi uyari gonderir ve ona tiklamadan alttaki script'İn koduna gecmez
+      // alert("Dikkat");
+    </script>
+    <script>
+      console.log("2.script'den gelen yazi");
+    </script>
+
+    <!-- harici script dosyasi calistiriyor ama hata aliyor cunku boyle bir sayfa yok -->
+    <!-- <script src="https://www.cw.com/deneme.js"></script> -->
+
+    <!-- script etiketi icerisinde yol verdim ve app.js'den veri cektim -->
+    <script src="app.js"></script>
+  </body>
+</html>
