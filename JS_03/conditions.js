@@ -123,9 +123,11 @@ console.log(maas);
 //! tek durum varsa short-circuit(tek if)
 
 //? short-circuit yonteminde aradaki operator "&&" ise kosul dogru oldugunda var olan ifadeyi(maas *= 1.1) calistirir aksi takdirde bir sey yapmaz
+//! ampersand
 calisma_Yili >= 5 && (maas *= 1.1);
 
 //? short-circuit yonteminde aradaki operator "||" ise kosul yanlis oldugunda var olan ifadeyi(maas *= 1.1) calistirir aksi takdirde bir sey yapmaz
+//! pipe
 calisma_Yili >= 5 || (maas *= 1.1);
 
 //******* Nasted Ternary (birden fazla kosul varsa) *******//
@@ -139,3 +141,31 @@ console.log(uyari);
 const uyari2 =
   hiz >= 120 ? "Hizlisin" : hiz >= 90 ? "Normal hizdasin" : "cok yavassin";
 console.log(uyari2);
+
+//********** Switch Case **********//
+
+const day = ;
+if (day <= 7) {
+  switch (day) {
+    case 1:
+      console.log("Monday");
+      break;
+    case 2:
+      console.log("Tuesday");
+      break;
+    case 3:
+      console.log("Wednesday");
+      break;
+    case 4:
+      console.log("Thursday");
+      break;
+    case 5:
+      console.log("Friday");
+      break;
+    default:
+      console.log("Weekend");
+      break;
+  }
+} else {
+  console.log("You entered the wrong number of days");
+}
