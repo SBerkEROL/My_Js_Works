@@ -87,7 +87,9 @@ if (s1 >= s2) {
   }
 }
 
-//*********** TERNARY **************//
+//************ TERNARY **************//
+//! şu varsa bunu yap yoksa bunu yap ternariy (if-else)
+
 //? if - else gibi calisir
 //! 1. YONTEM
 // not1 diye degisken olusturduk ona girilen degere gore gecti mi kaldi mi hespalanacak
@@ -118,8 +120,13 @@ calisma_Yili >= 5 ? (maas *= 1.1) : "";
 console.log(maas);
 
 //******* Short Circuit *******//
-// short-circuit yonteminde aradaki operator "&&" ise kosul dogru oldugunda var olan ifadeyi(maas *= 1.1) calistirir aksi takdirde bir sey yapmaz
+//! tek durum varsa short-circuit(tek if)
+
+//? short-circuit yonteminde aradaki operator "&&" ise kosul dogru oldugunda var olan ifadeyi(maas *= 1.1) calistirir aksi takdirde bir sey yapmaz
 calisma_Yili >= 5 && (maas *= 1.1);
+
+//? short-circuit yonteminde aradaki operator "||" ise kosul yanlis oldugunda var olan ifadeyi(maas *= 1.1) calistirir aksi takdirde bir sey yapmaz
+calisma_Yili >= 5 || (maas *= 1.1);
 
 //******* Nasted Ternary (birden fazla kosul varsa) *******//
 
