@@ -88,7 +88,7 @@ if (s1 >= s2) {
 }
 
 //*********** TERNARY **************//
-
+//? if - else gibi calisir
 //! 1. YONTEM
 // not1 diye degisken olusturduk ona girilen degere gore gecti mi kaldi mi hespalanacak
 const not1 = 70;
@@ -116,3 +116,19 @@ let maas = 15000;
 // calisma yili 5'e esit ya da buyukse maas * 1.1(%10)'u maasa ata
 calisma_Yili >= 5 ? (maas *= 1.1) : "";
 console.log(maas);
+
+//******* Short Circuit *******//
+// short-circuit yonteminde aradaki operator "&&" ise kosul dogru oldugunda var olan ifadeyi(maas *= 1.1) calistirir aksi takdirde bir sey yapmaz
+calisma_Yili >= 5 && (maas *= 1.1);
+
+//******* Nasted Ternary (birden fazla kosul varsa) *******//
+
+//! hiz hesaplama 1
+const hiz = 95;
+const uyari = hiz >= 120 ? "Cok hizlisin" : "Yavassin";
+console.log(uyari);
+
+//! hiz hesaplama 2
+const uyari2 =
+  hiz >= 120 ? "Hizlisin" : hiz >= 90 ? "Normal hizdasin" : "cok yavassin";
+console.log(uyari2);
