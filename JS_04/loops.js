@@ -30,3 +30,37 @@ for (let i = 10; i > 0; i--) {
 console.log("--------");
 
 //? 0-100 arasinda n adet rastgele sayi ureten for dongusu
+
+//! 1
+// +prompt = numberlastirdi
+const n = +prompt("kac tane rastgele sayi uretmek istersin?");
+
+// i=1;i n'den kucuk ise i++=i'yi arttir
+for (let i = 1; i <= n; i++) {
+  // Math.random 0'la 1 arasi sayi uretir onu da math.round ile en yakin sayiya yuvarliyoruz kusurattan kurtulmak icin *100
+  const random = Math.random();
+  const randomSayi1 = Math.round(random * 100);
+  console.log(random);
+  console.log(`${i}.rastgele sayi: ${randomSayi1}`);
+}
+
+//! 2
+const k = +prompt("kac tane rastgele sayi uretmek istersin?");
+
+for (let i = 1; i <= k; i++) {
+  const randomSayi = Math.round(Math.random() * 100);
+  console.log(`${i}. rastgele sayi : ${randomSayi}`);
+}
+
+//? 2 aralikta verilen dogal sayilarin oplamini bulan kod
+
+//! 1
+const n1 = 5;
+const n2 = 15;
+let toplam = 0;
+// j diye degisken kullandim j n1'den baslasin j n2'ye kadar devam etsin
+for (let j = n1; j <= n2; j++) {
+  //* toplam = toplam + j;
+  toplam += j;
+}
+console.log(toplam);
