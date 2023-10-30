@@ -64,3 +64,32 @@ for (let j = n1; j <= n2; j++) {
   toplam += j;
 }
 console.log(toplam);
+
+//! asal sayi
+
+let x = 0;
+let y = parseInt(prompt("Sayi giriniz:"));
+for (i = 1; i <= y; i++) {
+  if (y % i == 0) {
+    x++;
+  }
+}
+if (x == 2) {
+  console.log("Girdiğiniz sayi asal sayidir");
+} else {
+  console.log("Girdiğiniz sayi asal sayi degildir.");
+}
+
+//? break , continue
+// 0'dan basla; i <=10; i'yi 1 arttir
+for (let i = 0; i <= 10; i++) {
+  if (i <= 5) {
+    continue;
+  }
+  // i= 9 olunca donguyu kir
+  if (i === 9) {
+    break;
+  }
+
+  console.log(i);
+}
