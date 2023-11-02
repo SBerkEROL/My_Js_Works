@@ -112,7 +112,7 @@ console.log(emoji.length);
 // toUpperCase()	    Converts a string to uppercase letters.
 // trim()	            Removes whitespace from both ends of a string.
 // valueOf()	        Returns the primitive value of a String object.
-console.log("------------");
+console.log("------------------------");
 
 //? =====================================
 //?         String Birlestirme
@@ -130,7 +130,7 @@ let = yeniKelime = b1.concat(b2);
 console.log(b1);
 console.log(b2);
 console.log(yeniKelime);
-console.log("--------------------");
+console.log("------------------------");
 
 //*********************************/
 //*          Template Literal()
@@ -158,7 +158,7 @@ console.log(buyukHarf);
 // buyuk olarak yazdirdi ve yeni bir degiskene atadik artik yeni degisken buyuk harfli sekilde BUGUN HAVA GUNESLI oldu
 const yeniBuyukHarf = buyukHarf.toUpperCase();
 console.log(yeniBuyukHarf);
-console.log("-----------------");
+console.log("------------------------");
 
 //*********************************/
 //*        toLowerCase()
@@ -170,7 +170,7 @@ console.log(kucukHarf);
 
 const yeniKucukHarf = kucukHarf.toLowerCase();
 console.log(yeniKucukHarf);
-console.log("---------------");
+console.log("------------------------");
 
 //! kullanicidan aldigi isim'i "Hosgeldin AD(buyuk harfle)" yazdiran kod
 
@@ -191,7 +191,7 @@ let metin1 = "I love Javascript";
 
 console.log(metin1.split());
 console.log(metin1);
-console.log("---------");
+console.log("------------------------");
 
 // 3'e parcaladi(" ") oldugu icin bosluklardan boldu "I" "love" "Javascript"
 let splitMetin = metin1.split(" ");
@@ -203,19 +203,19 @@ for (let i = 0; i < splitMetin.length; i++) {
     console.log(`'I' kelimesi cumlenin ${i + 1}. elamanidir`);
   }
 }
-console.log("--------------");
+console.log("------------------------");
 
 // aylari ayirmak
 let months =
   "Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep / Oct / Sep / Nov / Dec";
 console.log(months.split("/"));
-console.log("------");
+console.log("------------------------");
 
 let tarih = "12.12.2023";
 
 let buhunTarih = tarih.split(".");
 console.log(`Bugunun tarihi ${tarih}`);
-console.log("---------");
+console.log("------------------------");
 
 // liste eleman ayirma
 let list = "Alparslan ;Mert ;Bilge ;Yigit ;Alp";
@@ -230,14 +230,14 @@ console.log(list.split(";", 3));
 
 // parcaladiktan sonra array oldu ve array methodlarindan join ve reverse kullanılabilir
 let newList = list.split(";");
-console.log("-------");
+console.log("------------------------");
 
 // default olarak arasına virgul koyar
 // console.log(newList.join())
 
 console.log(newList.join("-"));
 console.log(newList);
-console.log("-----------");
+console.log("------------------------");
 
 //? reverse
 //! split("") = harfleri alir
@@ -250,7 +250,7 @@ console.log("-----------");
 let selam = "Hello";
 // once split("") ile boldum(parcaladim), reverse ile tersine cevirdim, join diyerek tekrar string hale getirdim
 console.log(selam.split("").reverse().join(""));
-console.log("-----------");
+console.log("------------------------");
 
 //! polindrom
 let polindrom = "yapay";
@@ -265,3 +265,165 @@ if ((polindrom = polindromTersten)) {
 //! kelimeleri tersine cevirme
 let ataSozu = "Kopruyu gecene kadar ayiya dayi derler";
 console.log(ataSozu.split(" ").reverse().join());
+console.log("------------------------");
+
+/* -----------------------------------------------------*/
+//!             STRING PARÇALAMA-PAÇAYA ERİŞİM          */
+//!             Slice, Substring,Substr                 */
+/* -----------------------------------------------------*/
+//? String içinde bir bölümü almak için kullanılır.(immmutable, kalıcıdeğişiklik olmaz)
+// Slice(başlangıç index numarası, bitiş index numarası(bu numara dahil değildir))
+// negatif değerler ile tersten gelme yapılabilir
+
+//! Slice Metodu
+
+let ataSozu2 = "Oku da adam ol";
+console.log(ataSozu2.slice(7)); //? bitis degeri verilmezse sonuna kadar alir
+console.log(ataSozu2.slice(7, 11));
+console.log(ataSozu2.slice(-10, -8)); //? negariften alma(sagdan sola)
+console.log("------------------------");
+
+//! Substring(başlangıç index numarası,bitiş index numarası)
+// Slicedan farkı negatif sayı kullanılmaz
+
+let ataSozu3 = "Kopruyu gecene kadar ayiya, dayi derler";
+console.log(ataSozu3.substring(0, 7));
+console.log("------------------------");
+
+//! Substr (başlangıç index numarası,kaç adet karakter alınacağı)
+// substr üstü çizili(deprecated) kullanımdan kaldırılmış olması değil daha modern olan substirng ve slice kullanımının önerilmesidir.
+console.log(ataSozu3.substr(21, 5));
+console.log("------------------------");
+
+/* ------------------------------------------------ */
+/            Stringde Değişiklik yapma    */;
+/* ------------------------------------------------ */
+
+/* /* ------------------------------------------------ */
+/*              replace()  ve replaceAll()             */
+/* /* ------------------------------------------------ */
+
+// str.replace( ne değiştirecek, ne ile değiştirilecek) (immutable, kalıcı değişiklik yapzmaz)
+
+let ataSozu4 = "Kopruyu gecene kadar ayiya, dayi derler";
+console.log(ataSozu4.replace("ayiya", "dayiya"));
+console.log(ataSozu4);
+console.log("------------------------");
+
+// verilen kullanici adini degisken kurallarina uygun degilse duzenleme
+
+let variable = "kullanIcI adI gIrIsI"; // kullanici_adi
+
+let yeniVariable = variable.replace(" ", "_");
+console.log(yeniVariable);
+console.log("------");
+
+let yeniDeg = variable.replaceAll("I", "i");
+console.log(yeniDeg);
+console.log("------------------------");
+//? yukaridaki ikisinin tek seferde yapilisi
+let variable1 = variable.replaceAll(" ", "_").replaceAll("I", "i");
+console.log(variable1);
+console.log("------------------------");
+
+/* ---------------------------------------------------- */
+//!         String içinde arama işlemleri              */
+/* --------------------------------------------------- */
+// includes, indexOf, search ,match() metodlarını kullanabiliriz
+
+//! includes()   ... yı içeriyor mu -> true yada false bir değer döndürür.caseSensitive (küçük büyük harfe duyarlı) bir özelliktir.
+
+let ataSozu5 = "Kopruyu gecene kadar ayiya, dayi derler";
+
+console.log(
+  `Atsozunde dayi kelimesi geciyor mu?: ${ataSozu5.includes("dayi")}`
+);
+console.log("------------------------");
+
+let url = "https//google.com";
+
+let msg = url.includes("https")
+  ? `bu site guvenlidir`
+  : `bu site guvenli degildir`;
+console.log(msg);
+console.log("------------------------");
+
+let email = "google@gmail.com";
+
+mailGecerli = email.includes("@")
+  ? "Mail adresi gecerli"
+  : "Mail adresi gecerli degil";
+
+console.log(mailGecerli);
+console.log("------------------------");
+
+//! indexOf (aranacak metin, konum)
+//? Bir karakter yada karakter grubumun kaçıncı sırada olduğunu yani index numarasını verir.
+//?Eğer o karakter yoksa olmadığını -1 değeri vererek gösterir. Büyük küçük harfe duyarlıdır. Sadece ilk gördüğünün index numarasını verir
+
+// noktayi baz alir com'un
+console.log(email.indexOf(".com"));
+console.log(email.indexOf("."));
+
+//?
+// icinde olmadigi icin -1 ciktisi geldi
+console.log(email.indexOf("edu"));
+if (email === "edu") {
+  console.log("bu bir egitim mail adresi degildir");
+} else {
+  console.log("bu bir egitim sitesi degildir");
+}
+console.log("------------------------");
+
+//! search() : bir string içindeki aranan elemanda ilk bulduğunun index numarasını yazar. Bulamazsa -1 dönderir.
+// Büyük küçük harfe duyarlıdır.
+
+let metin4 = " Clarusway it bootcamp.Clarusway develop you IT field";
+
+console.log(metin4.search("IT"));
+console.log(metin4.search("it"));
+
+// Regex ile çözüm bulunabilir
+// Regular Expression
+//  Regex / / arasında ifade edilir.
+
+//?   /g => global : bütün cümle için uygula
+//?   /i => case sensitive özelliğini kaldırKüçük büyük harfe bakmadan bul
+
+console.log(metin4.search(/IT/gi));
+
+let word = "ynigÜn";
+
+console.log(word.search(/ü/gi));
+console.log(word.replaceAll(/ü/gi, "i"));
+
+console.log(word.search(/[aeiıouöü]/i));
+console.clear();
+/* ------------------------------------- */
+/*               match()                       */
+/* -------------------------------------------------- */
+// string içinde aranan metin bulunur ve bir dizi dönderir.
+
+let text = "Merhaba bugün gerçekten çok sıcak bir Bugün";
+
+console.log(text.match(/bugün/gi));
+
+let say = text.match(/[a]/gi);
+console.log(say.length);
+
+/* ------------------------------------------------- */
+/*                trim                      */
+/* ------------------------------------------------------- */
+
+let sentence1 = "     Clarusway  ";
+console.log(sentence1.trim());
+console.log(sentence1.trimStart());
+console.log(sentence1.trimEnd());
+/* ------------------------------------------------------ */
+/*                   startsWith,endsWith                   */
+/* -------------------------------------------------------- */
+// startswith ve endswith true false değer dönderir
+
+metin4 = "Clarusway";
+console.log(metin.toUpperCase().startsWith("C"));
+console.log(email.toUpperCase().endsWith("COM"));
