@@ -145,3 +145,62 @@ const fullName = `Merhaba ${ad} ${soyad} nasilsin.
 bugun github repo'mu duzenledim
 aynisini sana da tavsiye ederim`;
 console.log(fullName);
+console.log("--------------");
+
+//*********************************/
+//*        toUpperCase()
+//********************************/
+//? karakterleri buyuk harf'e donusturur
+
+const buyukHarf = "Bugun hava gunesli";
+console.log(buyukHarf);
+
+// buyuk olarak yazdirdi ve yeni bir degiskene atadik artik yeni degisken buyuk harfli sekilde BUGUN HAVA GUNESLI oldu
+const yeniBuyukHarf = buyukHarf.toUpperCase();
+console.log(yeniBuyukHarf);
+console.log("-----------------");
+
+//*********************************/
+//*        toLowerCase()
+//********************************/
+//? Karakterleri kucuk harf'e donusturur
+
+const kucukHarf = "Kucuk HARF deneme";
+console.log(kucukHarf);
+
+const yeniKucukHarf = kucukHarf.toLowerCase();
+console.log(yeniKucukHarf);
+console.log("---------------");
+
+//! kullanicidan aldigi isim'i "Hosgeldin AD(buyuk harfle)" yazdiran kod
+
+// let isim = prompt("Lutfen adinizi giriniz");
+// console.log(`Hosgeldin ${isim.toUpperCase()}`);
+// console.log("-----------");
+
+// =====================================
+//              split
+//  split parcaladigi bolumleri diziye cevirir
+// =====================================
+
+//? cumleleri speratore(ayirici) gore parcalama -immutable(kalici degisiklik yapmaz)
+
+// str.split(separator)
+
+let metin1 = "I love Javascript";
+
+console.log(metin1.split());
+console.log(metin1);
+
+// 3'e parcaladi "I" "love" "Javascript"
+let splitMetin = metin1.split(" ");
+console.log(splitMetin);
+
+for (let i = 0; i < splitMetin.length; i++) {
+  if (splitMetin[i] === "I") {
+    console.log(`'I' kelimesi cumlenin ${i + 1}. elamanidir`);
+  }
+}
+
+//* bosluklardan ayirmasi icin
+// console.log(metin1.split());
