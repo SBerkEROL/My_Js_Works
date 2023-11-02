@@ -191,16 +191,77 @@ let metin1 = "I love Javascript";
 
 console.log(metin1.split());
 console.log(metin1);
+console.log("---------");
 
-// 3'e parcaladi "I" "love" "Javascript"
+// 3'e parcaladi(" ") oldugu icin bosluklardan boldu "I" "love" "Javascript"
 let splitMetin = metin1.split(" ");
 console.log(splitMetin);
+console.log("---------");
 
 for (let i = 0; i < splitMetin.length; i++) {
   if (splitMetin[i] === "I") {
     console.log(`'I' kelimesi cumlenin ${i + 1}. elamanidir`);
   }
 }
+console.log("--------------");
 
-//* bosluklardan ayirmasi icin
-// console.log(metin1.split());
+// aylari ayirmak
+let months =
+  "Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep / Oct / Sep / Nov / Dec";
+console.log(months.split("/"));
+console.log("------");
+
+let tarih = "12.12.2023";
+
+let buhunTarih = tarih.split(".");
+console.log(`Bugunun tarihi ${tarih}`);
+console.log("---------");
+
+// liste eleman ayirma
+let list = "Alparslan ;Mert ;Bilge ;Yigit ;Alp";
+
+// ;'den itibaren ayir ilk 3'i getir
+console.log(list.split(";", 3));
+
+//! Join ve Reverse methodlari string methodu degildir, Array methodudur ama split ile cok kullanılir
+
+//? Join methodu
+// Birlestirme islemi
+
+// parcaladiktan sonra array oldu ve array methodlarindan join ve reverse kullanılabilir
+let newList = list.split(";");
+console.log("-------");
+
+// default olarak arasına virgul koyar
+// console.log(newList.join())
+
+console.log(newList.join("-"));
+console.log(newList);
+console.log("-----------");
+
+//? reverse
+//! split("") = harfleri alir
+//! split(" ") = kelimeleri alir
+// reverse methodu ile bir diziyi tersine cevirebiliriz.
+// Dizi icerisindeki ilk degeri son, son degeri ise
+// ilk sıraya olacak sekilde sıralayabilir
+
+//! harfleri tersine cevirme
+let selam = "Hello";
+// once split("") ile boldum(parcaladim), reverse ile tersine cevirdim, join diyerek tekrar string hale getirdim
+console.log(selam.split("").reverse().join(""));
+console.log("-----------");
+
+//! polindrom
+let polindrom = "yapay";
+let polindromTersten = polindrom.split(" ").reverse().join();
+
+if ((polindrom = polindromTersten)) {
+  console.log(`${polindromTersten} kelimesi polindrom'dur`);
+} else {
+  console.log(`${polindromTersten} kelimesi polindrom degildir`);
+}
+
+//! kelimeleri tersine cevirme
+let ataSozu = "Kopruyu gecene kadar ayiya dayi derler";
+console.log(ataSozu.split(" ").reverse().join());
